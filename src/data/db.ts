@@ -1,4 +1,12 @@
-export const db = [
+type Kit = {
+    id : number
+    name : string
+    image : string
+    description : string
+    price : number
+}
+
+export const db : Kit[] = [
     {
         id: 1,
         name: 'Aerial HG',

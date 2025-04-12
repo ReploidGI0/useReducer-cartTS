@@ -1,4 +1,11 @@
-export default function Kit({ kit, addToCart }) {
+import type { Kit } from '../types'
+
+type KitProps = {
+    kit : Kit
+    addToCart : (item : Kit) => void
+}
+
+export default function Kit({ kit, addToCart } : KitProps) {
     const {name, image,description, price } = kit
 
     return (

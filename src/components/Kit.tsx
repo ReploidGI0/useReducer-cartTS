@@ -1,11 +1,13 @@
 import type { Kit } from '../types'
+import type { CartActions } from '../reducers/cart-reducer'
+import { Dispatch } from 'react'
 
 type KitProps = {
     kit : Kit
-    addToCart : (item : Kit) => void
+    dispatch : Dispatch<CartActions>
 }
 
-export default function Kit({ kit, addToCart } : KitProps) {
+export default function Kit({kit, dispatch} : KitProps) {
     const {name, image,description, price } = kit
 
     return (
@@ -20,7 +22,7 @@ export default function Kit({ kit, addToCart } : KitProps) {
                 <button
                     type="button"
                     className="btn btn-dark w-100"
-                    onClick={() => addToCart(kit)}
+                    onClick={() => dispatch({type: 'add-to-cart', payload: {item: kit}})}
                 >Agregar al Carrito</button>
             </div>
         </div>

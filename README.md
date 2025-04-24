@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+# Carrito de Compras React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto consiste en el módulo de productos y carirto de compra de una tienda que vende Model Kits. Utilizando componentes hooks, custom hooks y localStorage, para que el carrito de compras quede almacenado en el navegador
 
-Currently, two official plugins are available:
+Algunas de las cosas que se aprendieron con este proyecto son:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### <a  /> LocalStorage
+Se utilizó localStorage para almacenar los datos de los productos agregados al carrito
 
-## Expanding the ESLint configuration
+### <a  /> Modularidad y Reusabilidad con Componentes
+La reutilización de componentes en este proyecto fue esencialmente necesaria para mostrar los productos y los productos dentro del carrito.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### <a  /> Custom Hooks
+Dentro del custom hook, se encuentra la lógica para agregar, eliminar o aumentar la cantidad de elementos agregados al carrito. De igual manera se encuentran varios hooks como useEffect para la parte del localStorage, useMemo para states derivados  y useState para el carrito
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### <a  /> Optimización del Rendimiento (Performance)
+Mediante el uso de operadores ternarios, se establece si se renderiza un componente o no, lo que puede mejorar el rendimiento de las aplicaciones web.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### <a  /> Tipado Estricto con TypeScript
+Se definieron tipos para los props de los componentes y funciones
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### <a  /> Framework CSS
+Se utilizó Bootstrap para manejar los estilos de la página
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+![Interfaz](https://github.com/ReploidGI0/cartTS/blob/main/images/carrito1.PNG "Interfaz")
+![Interfaz](https://github.com/ReploidGI0/cartTS/blob/main/images/carrito2.PNG "Interfaz")
+![Interfaz](https://github.com/ReploidGI0/cartTS/blob/main/images/carrito3.PNG "Interfaz")
+

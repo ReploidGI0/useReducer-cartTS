@@ -7,6 +7,9 @@ Este proyecto consiste en el módulo de productos y carirto de compra de una tie
 
 Algunas de las cosas que se aprendieron con este proyecto son:
 
+### <a  /> useReducer
+Se toma un enfoque un tanto diferente a las otras versiones del proyecto ya que se gestiona el estado del carrito en el reducer. Con los reducers se puede agrupar la lógica (cuando esta se empieza a volver compleja) para que quede mejor organizada. 
+
 ### <a  /> LocalStorage
 Se utilizó localStorage para almacenar los datos de los productos agregados al carrito
 
@@ -34,6 +37,9 @@ Se utilizó Bootstrap para manejar los estilos de la página
 This project consists of the product and shopping cart modules for a store that sells Model Kits. It uses components, hooks, custom hooks, and localStorage to store the shopping cart in the browser.
 
 Some of the things learned with this project are:
+
+### <a /> useReducer
+This takes a slightly different approach than other versions of the project, as the cart state is managed in the reducer. Reducers allow you to group logic (when it starts to get complex) to keep it more organized.
 
 ### <a  /> LocalStorage
 LocalStorage was used to store data for products added to the cart.
